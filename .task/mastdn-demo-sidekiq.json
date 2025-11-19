@@ -9,7 +9,7 @@
             "command": [
                 "bash",
                 "-c",
-                "bundle exec sidekiq"
+                "aws s3 cp s3://patchwork-private-env/qlub-fac62-firebase-adminsdk-fbsvc-a8213164f4.json /opt/mastodon/config && bundle exec sidekiq"
             ],
             "cpu": 0,
             "environment": [],
@@ -45,7 +45,7 @@
     "memory": "2048",
     "networkMode": "awsvpc",
     "placementConstraints": [],
-    "registeredAt": "2025-11-19T06:23:08.618Z",
+    "registeredAt": "2025-11-19T10:48:44.539Z",
     "registeredBy": "arn:aws:iam::672691776916:user/ahn",
     "requiresAttributes": [
         {
@@ -85,13 +85,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "revision": 1,
+    "revision": 4,
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
     "status": "ACTIVE",
-    "taskDefinitionArn": "arn:aws:ecs:eu-west-2:672691776916:task-definition/demo-mastdn-sidekiq:1",
+    "taskDefinitionArn": "arn:aws:ecs:eu-west-2:672691776916:task-definition/demo-mastdn-sidekiq:4",
     "taskRoleArn": "arn:aws:iam::672691776916:role/patchwork-ecs-task-role",
     "volumes": [],
     "tags": []
