@@ -125,7 +125,10 @@ RUN \
   patchelf \
   ;
 
-# Create temporary build layer from base image
+#install aws cli 
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip
+RUN ./aws/install && aws --version
+
 FROM ruby AS build
 
 ARG TARGETPLATFORM
